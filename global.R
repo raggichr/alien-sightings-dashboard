@@ -37,12 +37,3 @@ ufo <- filter(ufo, country == "us" & !(state %in% c("ak", "hi", "pr")))
 head(ufo_orig)
 head(ufo)
 print(str(ufo))
-
-# Test code ---------------------------------------------------------------
-
-ufo %>%
-    filter(
-        state == "ca",
-        date.posted >= "2004-04-27",
-        date.posted <= "2013-09-30"
-    )
