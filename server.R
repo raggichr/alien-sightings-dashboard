@@ -7,19 +7,15 @@
 #    http://shiny.rstudio.com/
 #
 
-library(dplyr)
-library(plotly)
-library(DT)
-
 # Define server logic required to draw a histogram
 server <- function(input, output) {
     
     data_select <- reactive({
         .GlobalEnv$ufo %>%
             filter(
-                state == input$state,
-                date.posted >= input$dates[1],
-                date.posted <= input$dates[2]
+                .data$state == input$state,
+                .data$date.posted >= input$dates[1],
+                .data$date.posted <= input$dates[2]
             )
     })
     

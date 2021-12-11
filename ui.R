@@ -7,19 +7,14 @@
 #    http://shiny.rstudio.com/
 #
 
-library(shinythemes)
-library(plotly)
-library(DT)
-
 # Define UI for application that draws a histogram
 ui <- fluidPage(
     
     # Application title
     titlePanel("UFO Sightings"),
     
-    # Adding a theme
-    # shinythemes::themeSelector(),
-    theme = shinythemes::shinytheme("darkly"),
+    # Add a theme
+    theme = shinythemes::shinytheme("darkly"), # shinythemes::themeSelector(),
     
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
